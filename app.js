@@ -8,11 +8,12 @@ if (window.Telegram && window.Telegram.WebApp) {
   // Включаем диалоговое окно подтверждения при закрытии
   Telegram.WebApp.enableClosingConfirmation();
 
-  // Устанавливаем черный цвет фона
-  Telegram.WebApp.setBackgroundColor('#313335');
+  // Устанавливаем черный цвет фона и заголовка
+  Telegram.WebApp.setBackgroundColor('#000000');
+  Telegram.WebApp.setHeaderColor('#000000');
 
-  // Устанавливаем цвет заголовка
-  Telegram.WebApp.setHeaderColor('#DDBCBC');
+  // Включаем вертикальные свайпы
+  Telegram.WebApp.isVerticalSwipesEnabled = true;
 }
 
 // Функция для открытия сайта в iframe
