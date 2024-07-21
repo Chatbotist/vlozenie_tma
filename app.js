@@ -13,7 +13,7 @@ if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.setHeaderColor('#000000');
 
   // Включаем вертикальные свайпы
-  Telegram.WebApp.isVerticalSwipesEnabled = true;
+  Telegram.WebApp.isVerticalSwipesEnabled = false;
 }
 
 // Функция для открытия сайта в iframe
