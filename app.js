@@ -12,7 +12,7 @@ if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.setBackgroundColor('#000000');
   Telegram.WebApp.setHeaderColor('#000000');
 
-  // Включаем вертикальные свайпы
+  // Отключаем вертикальные свайпы
   Telegram.WebApp.isVerticalSwipesEnabled = false;
 }
 
