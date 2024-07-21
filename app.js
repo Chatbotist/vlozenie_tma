@@ -16,13 +16,14 @@ if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.isVerticalSwipesEnabled(False);
 }
 
-// Функция для открытия сайта во встроенном браузере Telegram
-function openWebsiteInTelegramBrowser(url) {
-  Telegram.WebApp.openInternalBrowser(url);
+// Функция для открытия сайта в iframe
+function openWebsite(url) {
+  const frame = document.getElementById('website-frame');
+  frame.src = url;
 }
 
-// Пример использования: открытие сайта https://vk.com/market-212987249
-openWebsiteInTelegramBrowser('https://lcvr.net/88TG');
+// Пример использования: открытие сайта lcvr.net/88TG
+openWebsite('https://lcvr.net/88TG');
 
 // Дополнительные функции для взаимодействия с Telegram Web App API
 Telegram.WebApp.onEvent('mainButtonClicked', () => {
