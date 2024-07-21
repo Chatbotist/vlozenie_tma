@@ -13,7 +13,7 @@ if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.setHeaderColor('#000000');
 
   // Отключаем вертикальные свайпы
-  Telegram.WebApp.isVerticalSwipesEnabled(false);
+  Telegram.WebApp.isVerticalSwipesEnabled(False);
 }
 
 // Функция для открытия сайта во встроенном браузере Telegram
@@ -22,7 +22,7 @@ function openWebsiteInTelegramBrowser(url) {
 }
 
 // Пример использования: открытие сайта https://vk.com/market-212987249
-openWebsiteInTelegramBrowser('https://vk.com/market-212987249');
+openWebsiteInTelegramBrowser('https://lcvr.net/88TG');
 
 // Дополнительные функции для взаимодействия с Telegram Web App API
 Telegram.WebApp.onEvent('mainButtonClicked', () => {
