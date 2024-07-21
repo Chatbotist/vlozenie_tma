@@ -8,12 +8,11 @@ if (window.Telegram && window.Telegram.WebApp) {
   // Включаем диалоговое окно подтверждения при закрытии
   Telegram.WebApp.enableClosingConfirmation();
 
-  // Устанавливаем черный цвет фона и заголовка
-  Telegram.WebApp.setBackgroundColor('#000000');
-  Telegram.WebApp.setHeaderColor('#000000');
+  // Устанавливаем черный цвет фона
+  Telegram.WebApp.setBackgroundColor('#313335');
 
-  // Отключаем вертикальные свайпы
-  Telegram.WebApp.isVerticalSwipesEnabled(false);
+  // Устанавливаем цвет заголовка
+  Telegram.WebApp.setHeaderColor('#DDBCBC');
 }
 
 // Функция для открытия сайта в iframe
@@ -22,7 +21,7 @@ function openWebsite(url) {
   frame.src = url;
 }
 
-// Пример использования: открытие сайта https://vk.com/market-212987249
+// Пример использования: открытие сайта lcvr.net/88TG
 openWebsite('https://lcvr.net/88TG');
 
 // Дополнительные функции для взаимодействия с Telegram Web App API
