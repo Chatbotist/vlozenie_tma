@@ -1,6 +1,9 @@
 // Инициализация Telegram Web App API
 if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.ready();
+
+  // Раскрываем окно на полный экран
+  Telegram.WebApp.expand();
 }
 
 // Функция для открытия сайта в iframe
