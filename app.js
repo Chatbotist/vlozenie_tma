@@ -12,10 +12,8 @@ if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.setBackgroundColor('#000000');
   Telegram.WebApp.setHeaderColor('#000000');
 
-  // Скрываем область, где могут происходить вертикальные свайпы
-  const webAppContainer = document.getElementById('telegram-web-app');
-  webAppContainer.style.overflow = 'hidden';
-  webAppContainer.style.height = '100vh';
+  // Отключаем вертикальные свайпы
+  Telegram.WebApp.isVerticalSwipesEnabled(false);
 }
 
 // Функция для открытия сайта во встроенном браузере Telegram
