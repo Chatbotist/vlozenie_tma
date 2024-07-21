@@ -1,3 +1,11 @@
+// Устанавливаем политику безопасности контента
+document.addEventListener('DOMContentLoaded', () => {
+  const meta = document.createElement('meta');
+  meta.httpEquiv = 'Content-Security-Policy';
+  meta.content = 'frame-src https://vk.com/; object-src \'none\'';
+  document.head.appendChild(meta);
+});
+
 // Инициализация Telegram Web App API
 if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.ready();
@@ -13,17 +21,16 @@ if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.setHeaderColor('#000000');
 
   // Отключаем вертикальные свайпы
-  Telegram.WebApp.isVerticalSwipesEnabled = false;
+  Telegram.WebApp.isVerticalSwipesEnabled(false);
 }
 
-// Функция для открытия сайта в iframe
-function openWebsite(url) {
-  const frame = document.getElementById('website-frame');
-  frame.src = url;
+// Функция для открытия сайта во встроенном браузере Telegram
+function openWebsiteInTelegramBrowser(url) {
+  Telegram.WebApp.openInternalBrowser(url);
 }
 
-// Пример использования: открытие сайта lcvr.net/88TG
-openWebsite('https://lcvr.net/88TG');
+// Пример использования: открытие сайта https://vk.com/market-212987249
+openWebsiteInTelegramBrowser('https://vk.com/market-212987249');
 
 // Дополнительные функции для взаимодействия с Telegram Web App API
 Telegram.WebApp.onEvent('mainButtonClicked', () => {
