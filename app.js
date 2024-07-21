@@ -1,11 +1,3 @@
-// Устанавливаем политику безопасности контента
-document.addEventListener('DOMContentLoaded', () => {
-  const meta = document.createElement('meta');
-  meta.httpEquiv = 'Content-Security-Policy';
-  meta.content = 'frame-src https://vk.com/; object-src \'none\'';
-  document.head.appendChild(meta);
-});
-
 // Инициализация Telegram Web App API
 if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.ready();
@@ -20,8 +12,9 @@ if (window.Telegram && window.Telegram.WebApp) {
   Telegram.WebApp.setBackgroundColor('#000000');
   Telegram.WebApp.setHeaderColor('#000000');
 
-  // Отключаем вертикальные свайпы
-  Telegram.WebApp.isVerticalSwipesEnabled(false);
+  // Отключаем вертикальные свайпы (альтернативный способ)
+  Telegram.WebApp.MainButton.hide();
+  Telegram.WebApp.BackButton.hide();
 }
 
 // Функция для открытия сайта во встроенном браузере Telegram
