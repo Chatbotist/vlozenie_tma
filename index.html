@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Telegram Web App</title>
+  <title>Telegram Mini App</title>
   <link rel="stylesheet" href="app.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <h1>Welcome to my Telegram Web App!</h1>
-  <p>This is a simple web page within your Telegram Web App.</p>
-  <button id="open-website">Open Website</button>
-
+  <div id="app">
+    <iframe id="website-frame" frameborder="0"></iframe>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
