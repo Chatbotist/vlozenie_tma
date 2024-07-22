@@ -8,12 +8,6 @@ if (window.Telegram && window.Telegram.WebApp) {
   // Включаем диалоговое окно подтверждения при закрытии
   Telegram.WebApp.enableClosingConfirmation();
 
-  // Устанавливаем черный цвет фона
-  Telegram.WebApp.setBackgroundColor('#000000');
-
-  // Устанавливаем цвет заголовка
-  Telegram.WebApp.setHeaderColor('#000000');
-
   // Функция для открытия сайта во встроенном браузере Telegram
   function openWebsiteInTelegramBrowser(url) {
     if (url.startsWith('https://') || url.startsWith('http://')) {
