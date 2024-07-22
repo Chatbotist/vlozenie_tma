@@ -16,18 +16,14 @@ if (window.Telegram && window.Telegram.WebApp) {
       console.error('Invalid URL:', url);
     }
   }
+
+  // Обработчик клика на кнопку "Open Website"
+  document.getElementById('open-website').addEventListener('click', () => {
+    openWebsiteInTelegramBrowser('https://vk.com/market-212987249');
+  });
+
+  // Обработчик изменения темы приложения
+  Telegram.WebApp.onEvent('themeChanged', (theme) => {
+    document.body.style.backgroundColor = theme.bg_color;
+  });
 }
-
-// Пример использования: открытие сайта https://vk.com/market-212987249
-openWebsiteInTelegramBrowser('https://vk.com/market-212987249');
-
-// Дополнительные функции для взаимодействия с Telegram Web App API
-Telegram.WebApp.onEvent('mainButtonClicked', () => {
-  // Действия при нажатии на главную кнопку
-  Telegram.WebApp.close();
-});
-
-Telegram.WebApp.onEvent('themeChanged', (theme) => {
-  // Изменение темы приложения
-  document.body.style.backgroundColor = theme.bg_color;
-});
