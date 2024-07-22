@@ -20,7 +20,7 @@ function openWebsite(url) {
 }
 
 // Пример использования: открытие сайта lcvr.net/88TG
-openWebsite('https://vk.com/market-212987249');
+openWebsite('https://leadteh.site/chatbotist');
 
 // Дополнительные функции для взаимодействия с Telegram Web App API
 Telegram.WebApp.onEvent('mainButtonClicked', () => {
