@@ -8,21 +8,27 @@ if (window.Telegram && window.Telegram.WebApp) {
   // Включаем диалоговое окно подтверждения при закрытии
   Telegram.WebApp.enableClosingConfirmation();
 
+  // Отключаем вертикальные свайпы
+  Telegram.WebApp.isVerticalSwipesEnabled = false;
+
   // Устанавливаем черный цвет фона
   Telegram.WebApp.setBackgroundColor('#000000');
 
   // Устанавливаем цвет заголовка
   Telegram.WebApp.setHeaderColor('#000000');
+
+  // Функция для открытия сайта во встроенном браузере Telegram
+  function openWebsiteInTelegramBrowser(url) {
+    if (url.startsWith('https://') || url.startsWith('http://')) {
+      Telegram.WebApp.openInternalBrowser(url);
+    } else {
+      console.error('Invalid URL:', url);
+    }
+  }
 }
 
-// Функция для открытия сайта в iframe
-function openWebsite(url) {
-  const frame = document.getElementById('website-frame');
-  frame.src = url;
-}
-
-// Пример использования: открытие сайта lcvr.net/88TG
-openWebsite('https://leadteh.site/chatbotist');
+// Пример использования: открытие сайта https://vk.com/market-212987249
+openWebsiteInTelegramBrowser('https://vk.com/market-212987249');
 
 // Дополнительные функции для взаимодействия с Telegram Web App API
 Telegram.WebApp.onEvent('mainButtonClicked', () => {
