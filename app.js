@@ -8,9 +8,6 @@ if (window.Telegram && window.Telegram.WebApp) {
   // Включаем диалоговое окно подтверждения при закрытии
   Telegram.WebApp.enableClosingConfirmation();
 
-  // Отключаем вертикальные свайпы
-  Telegram.WebApp.isVerticalSwipesEnabled = false;
-
   // Устанавливаем черный цвет фона
   Telegram.WebApp.setBackgroundColor('#000000');
 
