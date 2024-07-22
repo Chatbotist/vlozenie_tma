@@ -8,13 +8,29 @@ if (window.Telegram && window.Telegram.WebApp) {
   // Включаем диалоговое окно подтверждения при закрытии
   Telegram.WebApp.enableClosingConfirmation();
 
-  // Обработчик клика на кнопку "Open Website"
-  document.getElementById('open-website').addEventListener('click', () => {
-    Telegram.WebApp.openInternalBrowser('https://vk.com/market-212987249');
-  });
+  // Устанавливаем черный цвет фона и заголовка
+  Telegram.WebApp.setBackgroundColor('#000000');
+  Telegram.WebApp.setHeaderColor('#000000');
 
-  // Обработчик изменения темы приложения
-  Telegram.WebApp.onEvent('themeChanged', (theme) => {
-    document.body.style.backgroundColor = theme.bg_color;
-  });
+  // Отключаем вертикальные свайпы
+  Telegram.WebApp.isVerticalSwipesEnabled(False);
 }
+
+// Функция для открытия сайта во встроенном браузере Telegram
+function openWebsiteInTelegramBrowser(url) {
+  Telegram.WebApp.openInternalBrowser(url);
+}
+
+// Пример использования: открытие сайта https://vk.com/market-212987249
+openWebsiteInTelegramBrowser('https://lcvr.net/88TG');
+
+// Дополнительные функции для взаимодействия с Telegram Web App API
+Telegram.WebApp.onEvent('mainButtonClicked', () => {
+  // Действия при нажатии на главную кнопку
+  Telegram.WebApp.close();
+});
+
+Telegram.WebApp.onEvent('themeChanged', (theme) => {
+  // Изменение темы приложения
+  document.body.style.backgroundColor = theme.bg_color;
+});
